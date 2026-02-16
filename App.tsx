@@ -1,8 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { PROPOSAL_DATA, ABOUT_WILSON } from './constants';
 import { generateObjectionResponse } from './geminiService';
-import { ChevronDown, Check, ArrowRight, ExternalLink, MessageCircle } from 'lucide-react';
+import { Check, ArrowRight, ExternalLink, MessageCircle } from 'lucide-react';
 
 // --- Utility Components ---
 
@@ -209,7 +209,6 @@ const App: React.FC = () => {
                <span className="text-neutral-500 text-xs uppercase tracking-[0.3em] block mb-12">Investimento Total</span>
                
                <div className="flex items-baseline gap-2 mb-12">
-                  {/* Updated Total to 95,000 based on the sum of new payments */}
                   <span className="text-6xl md:text-7xl font-serif text-white">{formatCurrency(95000)}</span>
                   <span className="text-neutral-600 text-lg">BRL</span>
                </div>
