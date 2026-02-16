@@ -29,7 +29,6 @@ const App: React.FC = () => {
     e.preventDefault();
     if (!objection) return;
     setLoadingObjection(true);
-    // Updated summary to reflect the correct platform name and new total value (95k)
     const summary = `Proposta Portal Dilson Stein. Valor Total 95k. Fluxo: 25k assinatura, 10k protótipo, 20k web, 20k mobile, 20k final. Escopo: App iOS/Android + Web + Academy.`;
     const resp = await generateObjectionResponse(objection, summary);
     setObjectionResponse(resp || '');
@@ -59,42 +58,44 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      {/* --- Cover Section --- */}
-      <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 relative pt-20">
-        <div className="max-w-4xl">
-          <FadeIn delay={100}>
-            <p className="text-neutral-500 text-xs uppercase tracking-[0.4em] mb-8 pl-1">
-              Proposta Comercial
-            </p>
-          </FadeIn>
-          <FadeIn delay={300}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.1] mb-12">
-              Gestão & Educação <br />
-              <span className="italic text-neutral-600">Integradas.</span>
-            </h1>
-          </FadeIn>
-          <FadeIn delay={500}>
-            <p className="text-lg md:text-xl text-neutral-400 font-light max-w-2xl leading-relaxed mb-16">
-              Uma plataforma digital completa (Web + Mobile) para gestão de talentos e monetização através do Dilson Stein Academy.
-            </p>
-          </FadeIn>
-          
-          <FadeIn delay={700}>
-             <div className="flex flex-col md:flex-row gap-8 md:items-center">
-                <button onClick={() => scrollToSection('presentation')} className="group flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-white hover:text-neutral-400 transition-colors">
-                    Ver Detalhes <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
-                </button>
-                <a 
-                   href="https://dilson-novo.vercel.app/" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition-colors border-l border-neutral-800 pl-8"
-                >
-                    <ExternalLink className="w-4 h-4" />
-                    Visualizar Protótipo
-                </a>
-             </div>
-          </FadeIn>
+      {/* --- Cover Section (Hero) --- */}
+      <section className="min-h-screen flex flex-col justify-center relative pt-20">
+        <div className="container mx-auto px-6 md:px-12">
+          <div className="max-w-4xl">
+            <FadeIn delay={100}>
+              <p className="text-neutral-500 text-xs uppercase tracking-[0.4em] mb-8 pl-1">
+                Proposta Comercial
+              </p>
+            </FadeIn>
+            <FadeIn delay={300}>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.1] mb-12">
+                Gestão & Educação <br />
+                <span className="italic text-neutral-600">Integradas.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={500}>
+              <p className="text-lg md:text-xl text-neutral-400 font-light max-w-2xl leading-relaxed mb-16">
+                Uma plataforma digital completa (Web + Mobile) para gestão de talentos e monetização através do Dilson Stein Academy.
+              </p>
+            </FadeIn>
+            
+            <FadeIn delay={700}>
+               <div className="flex flex-col md:flex-row gap-8 md:items-center">
+                  <button onClick={() => scrollToSection('presentation')} className="group flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-white hover:text-neutral-400 transition-colors">
+                      Ver Detalhes <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                  </button>
+                  <a 
+                     href="https://dilson-novo.vercel.app/" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-neutral-500 hover:text-white transition-colors border-l border-neutral-800 pl-8"
+                  >
+                      <ExternalLink className="w-4 h-4" />
+                      Visualizar Protótipo
+                  </a>
+               </div>
+            </FadeIn>
+          </div>
         </div>
         
         {/* Subtle Decorative Line */}
@@ -275,7 +276,9 @@ const App: React.FC = () => {
 
       {/* --- Footer --- */}
       <footer className="py-12 px-6 md:px-12 border-t border-neutral-900 text-neutral-600 text-[10px] uppercase tracking-widest text-center">
-         <p>© 2024 Portal Dilson Stein. Documento Confidencial.</p>
+         <div className="container mx-auto">
+            <p>© 2024 Portal Dilson Stein. Documento Confidencial.</p>
+         </div>
       </footer>
 
     </div>
