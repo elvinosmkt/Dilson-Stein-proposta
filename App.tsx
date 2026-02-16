@@ -229,7 +229,7 @@ const App: React.FC = () => {
                
                {/* WhatsApp Action Button */}
                <a 
-                  href="https://wa.me/5541999999999?text=Olá, aprovei a proposta do Portal Dilson Stein e gostaria de prosseguir com a assinatura do contrato." 
+                  href="https://wa.me/5541995175019?text=Olá, aprovei a proposta do Portal Dilson Stein e gostaria de prosseguir com a assinatura do contrato." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="mt-8 w-full bg-white text-black py-5 text-xs uppercase tracking-[0.25em] font-medium flex items-center justify-center gap-3 hover:bg-neutral-200 transition-colors"
