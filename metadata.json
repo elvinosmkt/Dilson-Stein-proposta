@@ -1,0 +1,8 @@
+{
+  "name": "Portal Dilson Stein - Proposta Digital",
+  "description": "Uma plataforma exclusiva para gestão de talentos e new faces, integrando scouting web e mobile.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
